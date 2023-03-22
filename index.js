@@ -18,7 +18,11 @@ const obj1 = {
 
 const obj2 = produce(obj1, (draft) => {
   draft.parents.mother = 'Ester';
-  draft.parents.father = 'Sergio';
+  draft.parents.father = 'Mario';
 });
 
 console.log(obj1);
+
+console.log(obj2);
+
+console.log(obj1 === obj2);
