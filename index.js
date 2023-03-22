@@ -1,4 +1,4 @@
-import immer from 'immer';
+import produce from 'immer';
 
 // Import stylesheets
 import './style.css';
@@ -16,8 +16,7 @@ const obj1 = {
   },
 };
 
-
-const obj2 = immer.produce(obj1, draft => {
+const obj2 = produce(obj1, (draft) => {
   draft.parents.mother = 'Ester';
   draft.parents.father = 'Sergio';
 });
